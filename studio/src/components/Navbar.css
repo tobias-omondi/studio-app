@@ -1,11 +1,72 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.main_container{
-    background-color: whitesmoke;
+
+.main_container {
+    background-color: rgb(212, 205, 205);
     display: flex;
-    justify-content: center;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 4px 40px; 
+}
+
+.Logo {
+    max-width: 60px; 
+}
+
+.Logo img {
+    width: 100%;
+}
+
+nav {
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: center; 
+}
+
+nav ul {
+    display: flex; 
+    justify-content: center; 
     align-items: center;
+    list-style: none;
+    padding: 0; 
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.nav_link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+}
+.nav_link:hover{
+    background-color: #451db3;
+    border-radius: 10%;
+    color: white;
+}
+
+.contact_button {
+    margin-left: auto; 
+}
+
+.btn_link {
+    text-decoration: none; 
+    color: white; 
+    font-family: "Afacad Flux", sans-serif;
+}
+
+button {
+    background-color: #007BFF; 
+    border: none; 
+    border-radius: 5px;
+    padding: 10px 15px; 
+    cursor: pointer; 
 }
