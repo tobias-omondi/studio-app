@@ -1,0 +1,45 @@
+html, body {
+    height: 100%; /* Ensure the body and html take full height */
+    margin: 0; /* Remove default margin */
+}
+
+.slider-item {
+    position: relative; /* Position relative for absolute positioning of caption */
+    width: 100vw; /* Full viewport width */
+    height: 150vh; /* Full viewport height */
+    margin-top: -10rem;
+}
+
+.slider-item img {
+    position: absolute; /* Position absolutely to cover the item */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Maintain aspect ratio, covering the area */
+}
+
+.caption {
+    position: absolute;
+    top: 50%; /* Positioning the caption at the bottom */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    text-align: center;
+}
+
+.slider-button {
+    margin-top: 3px;
+    padding: 10px;
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+
+.slider-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
