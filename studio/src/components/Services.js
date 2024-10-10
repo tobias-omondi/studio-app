@@ -51,7 +51,7 @@ const Services = () => {
       >
         {imageServices.map((service, index) => (
           <SwiperSlide key={index} className='services_slide'>
-            <img src={service.src} alt={`Service ${index + 1}`} style={{ width: '100%', height: 'auto' }} />
+            <img src={service.src} alt={`Service ${index + 1}`} style={{ width: '100%'}} className='image_slider'/>
             <div className='caption'>
               <p>{service.description}</p>
             </div>
