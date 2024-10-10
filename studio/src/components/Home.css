@@ -2,8 +2,7 @@ html, body {
     height: 100%; 
     margin: 0; 
 }
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 .slider-item {
     position: relative;
@@ -37,10 +36,15 @@ html, body {
     line-height: 1.2;
     width: 100%;
     max-width: 900px;
-    font-family: "Edu AU VIC WA NT Guides", cursive;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+
+        font-family: "Nunito Sans", sans-serif;
+        font-style: normal;
+        font-variation-settings:
+          "wdth" 100,
+          "YTLC" 500;
 }
 
 .slider-button {
