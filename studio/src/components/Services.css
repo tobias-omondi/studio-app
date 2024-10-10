@@ -12,7 +12,11 @@
     font-family: "Afacad Flux", sans-serif;
     font-weight: 400;
 }
-.services_slide img {
+.image_slider{
+    max-width: 100%;
+    height: auto;
+}
+.image_slider img {
     width: 100%;
     height: 100%;
     object-fit: cover;
