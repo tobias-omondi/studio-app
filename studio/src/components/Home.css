@@ -26,7 +26,6 @@ html, body {
     left: 50%; 
     transform: translate(-50%, -30%);
     color: white; /* Text color */
-    background-color: rgba(0, 0, 0, 0.5); 
     padding: 10px;
     text-align: center;
     border: 50%;

@@ -29,7 +29,7 @@ const Home = () => {
     <AutoplaySlider
       play={true}
       cancelOnInteraction={false} 
-      interval={10000}
+      interval={13000}
       animation="foldOutAnimation" 
     >
       {embaSliders.map((image, index) => (
