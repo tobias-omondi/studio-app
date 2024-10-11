@@ -4,6 +4,7 @@ import test2 from '../studioAsset/social2.jpeg'
 import test3 from '../studioAsset/social3.jpeg'
 import test4 from '../studioAsset/test4.jpeg'
 import test5 from '../studioAsset/test5.jpeg'
+import test6 from '../studioAsset/test6.jpeg'
 import Testimonials from './Testimonials'
 
 const imageGallery = [
@@ -11,7 +12,8 @@ const imageGallery = [
     { src: test2 },
     { src: test3 },
     { src: test4 },
-    { src: test5 }
+    { src: test5 },
+    { src: test6 }
 ]
 
 const Imagesec = () => {
