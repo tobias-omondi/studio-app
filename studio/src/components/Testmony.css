@@ -56,7 +56,17 @@
 .awssld__wrapper {
     background: transparent !important;
 }
-
+/* Reduce the size of pagination dots */
+.awssld__bullets button {
+    width: 5px; 
+    height: 5px; 
+    background-color: #080441; 
+    border-radius: 50%; 
+}
+.awssld__next::before, .awssld__prev::before {
+    background-color:  #080441;
+    border-radius: 50%; 
+}
 
 /* Media queries to make sure it’s responsive */
 @media (max-width: 768px) {
