@@ -5,7 +5,7 @@ const Social = () => {
   return (
     <>
     <div>
-      <h2 style={{color:'white'}}>Social media</h2>
+      <h2 style={{color:'black'}}>Social media</h2>
     </div>
     <Footer />
     </>

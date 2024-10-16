@@ -6,6 +6,7 @@ import test4 from '../studioAsset/test4.jpeg';
 import test5 from '../studioAsset/test5.jpeg';
 import test6 from '../studioAsset/test5.jpg';
 import Testimonials from './Testimonials';
+
 // CSS import
 import "./Imagesec.css";
 
@@ -21,6 +22,7 @@ const imageGallery = [
 
 const Imagesec = () => {
   return (
+    <>
     <div className='add_margin'>
       <div className='section_img'>
         {imageGallery.map((image, index) => (
@@ -32,8 +34,9 @@ const Imagesec = () => {
           />
         ))}
       </div>
-      <Testimonials />
     </div>
+    <Testimonials />
+    </>
   );
 }
 

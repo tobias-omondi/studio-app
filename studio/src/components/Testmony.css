@@ -1,16 +1,17 @@
-/* .testimonies_slides {
+.testimonies_slides {
     margin: 5% auto;
-    padding: 20px;
-    max-width: 1200px;
+    padding: 10px;
+    max-width: 1000px;
+    max-height: 340px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-} */
+}
 .testmony_sliders {
     width: 100%;
-    max-width: 250px;
+    max-width: 100px;
     margin: 0 auto;
     padding: 10px;
     display: flex;
@@ -20,10 +21,10 @@
 }
 .testmony_sliders img {
     width: 100%;
-    max-height: 10rem;
-    border-radius: 200px 200px 200px 200px;
+    /* max-height: 10rem; */
     object-fit: cover;
     transition: transform 0.3s ease;
+    border-radius: 50%;
 }
 
 .testmony_sliders img:hover {
