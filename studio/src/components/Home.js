@@ -11,7 +11,6 @@ import 'react-awesome-slider/dist/styles.css'; // Basic styles
 import 'react-awesome-slider/dist/custom-animations/fold-out-animation.css'; // Correct path
 import Aboutus from './Aboutus';
 import Services from './Services';
-import Imagesec from './Imagesec';
 
 // Create an array of image objects with captions and button information
 const embaSliders = [
@@ -56,7 +55,6 @@ const Home = () => {
     </AutoplaySlider>
     <Aboutus />
     <Services />
-    <Imagesec />
     </>
   );
 }

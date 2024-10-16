@@ -1,0 +1,79 @@
+/* .testimonies_slides {
+    margin: 5% auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+.testmony_sliders {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.testmony_sliders img {
+    width: 100%;
+    max-height: 10rem;
+    border-radius: 200px 200px 200px 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.testmony_sliders img:hover {
+    transform: scale(1.1);
+}
+
+/* Captions styling */
+.testmony_sliders p {
+    margin-top: 15px;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+}
+/* Override background of the slider */
+.awssld {
+    background: transparent !important;
+}
+
+/* Remove the background color from individual slides */
+.awssld__content {
+    background: transparent !important;
+}
+
+/* Ensure there’s no background color on other elements */
+.awssld__wrapper {
+    background: transparent !important;
+}
+
+
+/* Media queries to make sure it’s responsive */
+@media (max-width: 768px) {
+    .testmony_sliders {
+        max-width: 150px;
+    }
+    
+    .testmony_sliders p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .testmony_sliders {
+        max-width: 300px;
+    }
+    
+    .testmony_sliders p {
+        font-size: 1.2rem;
+    }
+}

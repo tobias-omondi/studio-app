@@ -12,6 +12,7 @@ import Services4 from "../studioAsset/services15.jpg";
 import Services5 from "../studioAsset/services14.jpg";
 import Services6 from "../studioAsset/services6.jpeg";
 import Services7 from "../studioAsset/services8.jpeg";
+import Imagesec from './Imagesec';
 
 // Array of service images and descriptions
 const imageServices = [
@@ -26,6 +27,7 @@ const imageServices = [
 
 const Services = () => {
   return (
+    <>
     <div className='services_container'>
       <div className='services_heading'>
         <h2>Services</h2>
@@ -47,14 +49,16 @@ const Services = () => {
             {/* Container to wrap the image and the overlay text */}
             <div className='image_container'>
               <img src={service.src} alt={`Service ${index + 1}`} className='image_slider' />
-              <div className='caption_description'>
-                <p>{service.description}</p>
+              <div className='overlay'>
+                <p className='description_text'>{service.description}</p>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
+    <Imagesec />
+    </>
   );
 }
 

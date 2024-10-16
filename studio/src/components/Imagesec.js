@@ -21,7 +21,7 @@ const imageGallery = [
 
 const Imagesec = () => {
   return (
-    <>
+    <div className='add_margin'>
       <div className='section_img'>
         {imageGallery.map((image, index) => (
           <img 
@@ -33,7 +33,7 @@ const Imagesec = () => {
         ))}
       </div>
       <Testimonials />
-    </>
+    </div>
   );
 }
 
