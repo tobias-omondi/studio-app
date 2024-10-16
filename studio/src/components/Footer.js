@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
     <div>
-      <h2 style={{color:'white'}}>Footer</h2>
+      <h2 style={{color:'black'}}>Footer</h2>
     </div>
     </>
   )
