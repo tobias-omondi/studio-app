@@ -1,10 +1,11 @@
 import React from 'react'
-import Footer from './Footer'
 import "./Socials.css"
 import socialImagesone from "../studioAsset/social1.jpeg"
 import socialImagestwo from "../studioAsset/socials4.jpeg"
 import socialImagesthree from "../studioAsset/socials5.jpeg"
 import socialImagesfour from "../studioAsset/social7.jpeg"
+import { CiInstagram } from "react-icons/ci";
+import Message from './Message'
 
 const SocialImages = [
   { src: socialImagesone, alt: "photoshot 1" },
@@ -26,11 +27,13 @@ const Social = () => {
             <img key={index} src={image.src} alt={image.alt} className='social_image' />
           ))}
       </div>
-      <div>
-
+      <div className='instagram_social'>
+      <a href='https://www.instagram.com/'>
+        <h3> <CiInstagram />  FOllow us THrough</h3>
+      </a>
       </div>
     </div>
-    <Footer />
+    <Message/>
     </div>
   )
 }
