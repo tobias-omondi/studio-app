@@ -1,0 +1,73 @@
+.social_heading{
+    background-color: rgb(63, 58, 58);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+.social_heading h2{
+    text-decoration: overline;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+
+        font-family: "Nunito Sans", sans-serif;
+        font-style: normal;
+        font-variation-settings:
+          "wdth" 100,
+          "YTLC" 500;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+.social_heading p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 1000px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding:  10px;
+    color: #fff;
+
+        font-family: "Nunito Sans", sans-serif;
+        font-style: normal;
+        font-variation-settings:
+          "wdth" 100,
+          "YTLC" 500;
+}
+/* STYLING IMAGES */
+
+.social_images {
+    display: flex;
+    justify-content: space-between; /* Space between images for larger screens */
+    align-items: center;
+    gap: 4rem; /* Gap between images */
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* On smaller screens, center the images */
+@media (max-width: 1023px) {
+    .social_images {
+        justify-content: center; /* Center images on small screens */
+    }
+}
+
+/* On larger screens (desktop), force images into a single row */
+@media (min-width: 1024px) {
+    .social_images {
+        flex-wrap: nowrap; /* No wrapping on large screens */
+    }
+}
+
+.social_images img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 320px;
+    object-fit: cover; /* Ensures images keep their aspect ratio */
+}
+
