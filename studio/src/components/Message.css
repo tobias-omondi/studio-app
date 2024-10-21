@@ -1,0 +1,46 @@
+.message-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+.message-item{
+    width: 100%;
+    max-width: 800px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.message-item h2 {
+    text-align: center;
+    text-decoration: overline;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #000;
+
+        font-family: "Nunito Sans", sans-serif;
+        font-style: normal;
+        font-variation-settings:
+          "wdth" 100,
+          "YTLC" 500;
+}
+.message-item p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 1000px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding:  10px;
+    color: #000;
+
+        font-family: "Nunito Sans", sans-serif;
+        font-style: normal;
+        font-variation-settings:
+          "wdth" 100,
+          "YTLC" 500;
+}
