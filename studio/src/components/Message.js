@@ -35,6 +35,7 @@ const Message = () => {
     };
 
     return (
+        <>
         <div className="message-container">
             {messageCaption.map((item, index) => (
                 <div key={index} className="message-item">
@@ -73,8 +74,9 @@ const Message = () => {
                     <button type='submit'>Send Message</button>
                 </form>
             </div>
-            <Footer />
         </div>
+        <Footer />
+        </>
     );
 }
 
