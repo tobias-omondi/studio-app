@@ -20,7 +20,7 @@ const Testimonials = () => {
   return (
     <>
       <div>
-        <h2 style={{ color: 'black', textAlign: 'center', marginTop:'6rem' }}>Testimonials</h2>
+        <h2 style={{ color: 'black', textAlign: 'center', marginTop:'3rem' }}>Testimonials</h2>
         <AwesomeSlider className='testimonies_slides'>
           {thoughts.map((thought, index) => (
             <div key={index} className='testmony_sliders'>
