@@ -37,43 +37,45 @@ const Message = () => {
     return (
         <>
         <div className="message-container">
+        <div className="message-heading">
             {messageCaption.map((item, index) => (
                 <div key={index} className="message-item">
                     {item.messageHeading && <h2 className="message-heading">{item.messageHeading}</h2>}
                     {item.message && <p className="message-text">{item.message}</p>}
                 </div>
             ))}
+             </div>
             <div className='message-inputs'>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor='name'>Name:</label>
                     <input
                         type='text'
                         id='name'
                         name='name'
+                        placeholder='Name'
                         value={formData.name}
                         onChange={handleChange}
                         required
                     />
-                    <label htmlFor='email'>Email:</label>
                     <input
                         type='email'
                         id='email'
                         name='email'
+                        placeholder='email'
                         value={formData.email}
                         onChange={handleChange}
                         required
                     />
-                    <label htmlFor='message'>Message:</label>
                     <textarea
                         id='message'
                         name='message'
+                        placeholder='Message'
                         value={formData.message}
                         onChange={handleChange}
                         required
                     ></textarea>
                     <button type='submit'>Send Message</button>
                 </form>
-            </div>
+        </div>
         </div>
         <Footer />
         </>
