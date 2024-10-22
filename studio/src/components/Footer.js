@@ -35,6 +35,25 @@ const Footer = () => {
         <p>&copy; {currentYear} EMBA ONE STUDIO. All rights reserved.</p>
       </div>
     </div>
+    <div>
+      <ul>
+        <li>
+          <a href='/'>Home</a>
+        </li>
+        <li>
+          <a href='/gallery'>GALLERY</a>
+        </li>
+        <li>
+          <a href='/podcast'>PODCAST</a>
+        </li>
+        <li>
+          <a href='/videos'>VIDEOS</a>
+        </li>
+        <li>
+          <a href='/contact'>CONTACT</a>
+        </li>
+      </ul>
+    </div>
     </div>
   )
 }
