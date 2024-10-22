@@ -2,13 +2,16 @@
     background-color: rgb(212, 205, 205);
     padding: 20px 8rem 30px;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
 }
 .Footer-menu{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
     line-height: 1.8;
     display: flex;
 }

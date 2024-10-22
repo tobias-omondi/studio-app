@@ -4,6 +4,7 @@
     justify-content: center;
     justify-content: space-around;
     background-color: #242121;
+    padding: 5rem;
 }
 .message-item{
     width: 100%;
