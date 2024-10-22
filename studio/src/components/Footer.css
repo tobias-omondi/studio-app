@@ -1,3 +1,28 @@
-.Footer_container{
+.Footer-container{
     background-color: rgb(212, 205, 205);
+    padding: 20px 8rem 30px;
+    margin: auto;
+}
+.Footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    line-height: 1.8;
+    display: flex;
+}
+.Footer_container P{
+    text-decoration: overline;
+}
+.Footer-Logo img{
+    width: 100%;
+    max-width: 100px;
+}
+.socialmedia-logo ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
