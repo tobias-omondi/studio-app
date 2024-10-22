@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import "./Message.css";
 import Footer from './Footer';
+import {motion} from "framer-motion";
+
+
 
 const messageCaption = [
     {
@@ -51,7 +54,7 @@ const Message = () => {
                         type='text'
                         id='name'
                         name='name'
-                        placeholder='Name'
+                        placeholder='Name:'
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -60,7 +63,7 @@ const Message = () => {
                         type='email'
                         id='email'
                         name='email'
-                        placeholder='email'
+                        placeholder='email:'
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -68,12 +71,19 @@ const Message = () => {
                     <textarea
                         id='message'
                         name='message'
-                        placeholder='Message'
+                        placeholder='Message:'
                         value={formData.message}
                         onChange={handleChange}
                         required
                     ></textarea>
-                    <button type='submit'>Send Message</button>
+                    <motion.button
+                     type='submit' className='btn-message'
+                    initial = {{opacity: 0, scale: 0.8}}
+                    animate={{ opacity: 1, scale: 1 }} 
+                    transition={{ duration: 0.5 }} 
+                    whileHover={{ scale: 1.05 }} 
+                    whileTap={{ scale: 0.95 }}>Send Message 
+                    </motion.button>
                 </form>
         </div>
         </div>
