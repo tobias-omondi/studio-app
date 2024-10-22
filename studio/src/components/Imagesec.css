@@ -1,5 +1,7 @@
 .add_margin{
-  margin-top: 7rem;
+  margin-top: 3rem;
+  padding: 20px;
+  background-color: #242121;
 }
 .section_img{
     width: 100%;
