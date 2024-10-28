@@ -59,3 +59,22 @@ html, body {
 .slider-button:hover {
     background-color: #0056b3; 
 }
+@media (min-width: 768px) {
+    .caption-text {
+      font-size: 1.25rem;
+    }
+  
+    .slider-button {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .caption-text {
+      font-size: 1.5rem;
+    }
+  
+    .slider-button {
+      font-size: 1.125rem;
+    }
+  }
