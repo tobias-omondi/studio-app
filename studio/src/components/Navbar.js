@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion"; // Import motion
+import { motion } from "framer-motion";
 import logo from "../studioAsset/logo.png";
+import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 
 const navLinks = [
@@ -11,22 +12,28 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className='main_container'>
       <div className='Logo'>
         <img src={logo} alt='Logo' />
       </div>
-      <nav>
+      <nav className={`nav_menu ${isMenuOpen ? 'active' : ''}`}>
         <motion.ul
-          initial={{ opacity: 0, y: -20 }} // Initial state
-          animate={{ opacity: 1, y: 0 }} // Animate to this state
-          transition={{ duration: 0.5 }} // Duration of the animation
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
           {navLinks.map((link, index) => (
-            <motion.li 
+            <motion.li
               key={index}
-              whileHover={{ scale: 1.1 }} // Scale on hover
-              transition={{ type: "spring", stiffness: 300 }} // Spring effect on hover
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
               <Link to={link.url} className='nav_link'>{link.title}</Link>
             </motion.li>
@@ -34,14 +41,17 @@ const Navbar = () => {
         </motion.ul>
       </nav>
       <div className='contact_button'>
-        <motion.button 
+        <motion.button
           type='button'
-          whileHover={{ backgroundColor: "gray", scale: 0.9 }} // Change background color and scale on hover
-          whileTap={{ scale: 0.9 }} // Scale down on click
-          transition={{ duration: 0.4 }} // Transition duration for hover and tap effects
+          whileHover={{ backgroundColor: "gray", scale: 0.9 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.4 }}
         >
           <Link to='/contact' className='btn_link'>Contact Us</Link>
         </motion.button>
+      </div>
+      <div className='toggle_menu' onClick={toggleMenu}>
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
     </div>
   );

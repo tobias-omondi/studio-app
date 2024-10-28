@@ -70,3 +70,45 @@ button {
     padding: 10px 15px; 
     cursor: pointer; 
 }
+.toggle_menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .main_container {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+  
+    .nav_menu {
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: max-height 0.3s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+    }
+  
+    .nav_menu.active {
+      max-height: 500px;
+    }
+  
+    .nav_menu li {
+      margin: 1rem;
+    }
+  
+    .contact_button {
+      display: block;
+      margin-top: 1rem;
+    }
+  
+    .toggle_menu {
+      display: block;
+    }
+  }
