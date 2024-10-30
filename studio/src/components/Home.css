@@ -2,6 +2,7 @@ html, body {
     height: 100%; 
     margin: 0; 
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 .slider-item {
@@ -28,22 +29,17 @@ html, body {
     color: white; /* Text color */
     padding: 10px;
     text-align: center;
-    border: 50%;
 }
-.caption p{
+
+.caption p {
     font-size: 2.1rem;
     line-height: 1.2;
     width: 100%;
     max-width: 900px;
-    font-optical-sizing: auto;
     font-weight: 600;
+    font-family: "Nunito Sans", sans-serif;
     font-style: normal;
-
-        font-family: "Nunito Sans", sans-serif;
-        font-style: normal;
-        font-variation-settings:
-          "wdth" 100,
-          "YTLC" 500;
+    font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 .slider-button {
@@ -58,4 +54,21 @@ html, body {
 
 .slider-button:hover {
     background-color: #0056b3; 
+}
+
+/* Responsive part for max-width 768px */
+@media (max-width: 768px) {
+    .home-slider {
+        display: none; /* Hide the slider for small screens */
+    }
+
+    .single-image {
+        display: block; /* Display a single image */
+        width: 100vw;
+        height: 100vh;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFalpmgKREW5pkgj5Bu1oMrLLE9q-wzkS79w&s');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
