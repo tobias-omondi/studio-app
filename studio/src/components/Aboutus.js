@@ -1,6 +1,7 @@
 import React from 'react'
 import './Aboutus.css'
 import aboutus1 from '../studioAsset/aboutus1.jpg'
+import Imagesec from './Imagesec'
 
 
 const aboutParagraph = [
@@ -36,6 +37,7 @@ const Aboutus = () => {
         <p>{aboutImage[0].caption3}</p>
     </div>
     </div>
+    <Imagesec />
     </>
   )
 }

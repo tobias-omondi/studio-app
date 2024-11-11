@@ -1,90 +1,33 @@
-.testimonies_slides {
-    margin: 5% auto;
-    padding: 5px;
-    max-width: 900px;
-    max-height: 340px;
+.testimonials-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+.testimonial-slide{
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    height: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-.testmony_sliders {
+.testimonial-image{
     width: 100%;
-    max-width: 100px;
-    margin: 0 auto;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.testmony_sliders img {
-    width: 100%;
-    /* max-height: 10rem; */
+    max-width: 150px;
+    height: 100px;
     object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 50%;
+    border-radius: 10px;
 }
-
-.testmony_sliders img:hover {
-    transform: scale(1.1);
+.testimonial-slide h3{
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 500;
+    font-size: 2.1rem;
 }
-
-/* Captions styling */
-.testmony_sliders p {
-    margin-top: 15px;
-    color: white;
-    font-size: 1.1rem;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.5;
-    text-align: center;
-    width: 100%;
-    max-width: 200px;
+.testimonial-slide p{
+    margin-top: 5%;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.3;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.2rem;
 }
-/* Override background of the slider */
-.awssld {
-    background: transparent !important;
-}
-
-/* Remove the background color from individual slides */
-.awssld__content {
-    background: transparent !important;
-}
-
-/* Ensure there’s no background color on other elements */
-.awssld__wrapper {
-    background: transparent !important;
-}
-/* Reduce the size of pagination dots */
-.awssld__bullets button {
-    width: 5px; 
-    height: 5px; 
-    background-color: #080441; 
-    border-radius: 50%; 
-}
-.awssld__next::before, .awssld__prev::before {
-    background-color:  #080441;
-    border-radius: 50%; 
-}
-
-/* Media queries to make sure it’s responsive */
-@media (max-width: 768px) {
-    .testmony_sliders {
-        max-width: 150px;
-    }
-    
-    .testmony_sliders p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .testmony_sliders {
-        max-width: 300px;
-    }
-    
-    .testmony_sliders p {
-        font-size: 1.2rem;
-    }
+.testimonial-slide p h3 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
