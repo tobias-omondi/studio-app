@@ -17,6 +17,7 @@
     font-family: "Afacad Flux", sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .main_section{
     display: flex;
@@ -38,4 +39,81 @@
     font-weight: 400;
     font-size: 1.2rem;
     text-align: center;
+}
+@media screen and (max-width:480px){
+    .about_section{
+        width: 100%;
+        margin: 9% auto;
+        padding: 5px;
+        max-width: 350px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .main_section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .about_img img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    .last_caption{
+        width: 100%;
+        margin: 7% auto;
+        padding: 5px;
+        max-width: 350px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .about_section{
+        width: 100%;
+        margin: 8% auto;
+        padding: 5px;
+        max-width: 350px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .main_section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .about_img img {
+        width: 100%;
+        height: auto;
+    }
+    .last_caption{
+        width: 100%;
+        margin: 8% auto;
+        padding: 5px;
+        max-width: 350px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1025px){
+    .about_section{
+        width: 100%;
+        margin: 6% auto;
+        padding: 5px;
+        max-width: 750px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .main_section{
+        gap: 5rem;
+    }
+    .about_img img {
+        width: 130%;
+        height: auto;
+        padding-left: 1.4rem;
+    }
+    .last_caption{
+        width: 100%;
+        margin: 5% auto;
+        padding: 5px;
+        max-width: 400px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    }
 }
