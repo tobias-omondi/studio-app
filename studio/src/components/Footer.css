@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .Footer-menu{
     display: flex;
@@ -15,17 +15,62 @@
     line-height: 1.8;
     display: flex;
 }
-.Footer_container P{
-    text-decoration: overline;
+.Footer-menu p{
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
 }
 .Footer-Logo img{
     width: 100%;
     max-width: 100px;
 }
-.socialmedia-logo ul{
+.socialmedia-logo ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+    gap: 2rem; 
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+}
+
+.socialmedia-logo li {
+    display: flex;
+}
+
+.socialmedia-logo a {
+    text-decoration: none; 
+    font-size: 1.8rem;
+    color: rgb(94, 94, 93);
+    cursor: pointer;
+}
+.socialmedia-logo a:hover {
+    text-decoration: none; 
+    font-size: 1.8rem;
+    color: rgb(38, 32, 117);
+}
+.copywrite-container{
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bolder;
+    line-height: 1.2;
+    font-family: "Afacad Flux", sans-serif;
+}
+.social-link-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; 
+    padding: 5px; 
+    margin: 0; 
+    list-style: none; 
+}
+
+/* phones friendlyness*/
+@media screen  and (max-width:480px){
+    .Footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

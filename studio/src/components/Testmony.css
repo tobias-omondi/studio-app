@@ -96,7 +96,7 @@
 }
 /* small tablets friendly */
 
-@media screen and (max-width:481px) and (max-width: 768px) {
+@media screen and (min-width:481px) and (max-width: 768px) {
     .testimonial-heading h3{
         font-size: 1.3rem;
         margin-top: 6%;
