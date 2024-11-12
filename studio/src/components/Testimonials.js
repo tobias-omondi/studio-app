@@ -1,6 +1,7 @@
 import React from 'react';
-import 'react-awesome-slider/dist/styles.css';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import Social from './Social';
 import testmony1 from "../studioAsset/testimony1.jpg";
 import testmony2 from "../studioAsset/testmony2.jpg";
@@ -8,8 +9,8 @@ import testmony3 from "../studioAsset/testmony.jpg";
 import testmony4 from "../studioAsset/testmony3.jpg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "./Testmony.css";
+import { Pagination, Navigation } from 'swiper/modules';
 
-// Array of testimonials with images and captions
 const thoughts = [
   { src: testmony1, alt: "Person 1", name: "Henry Oloa", captions: "''Emba1 studio has transformed my perspective on quality and service. They offer a highly personalized experience that ensures every detail is attended to. The team is extremely professional, and I’ve felt valued at every interaction.''" },
   { src: testmony2, alt: "Person 2", name: "Judy Lola", captions: "''The level of creativity and dedication at Emba1 studio is unmatched. Their unique approach to customer service makes each experience feel special, leaving a lasting impression on clients like myself.''" },
@@ -20,10 +21,19 @@ const thoughts = [
 const Testimonials = () => {
   return (
     <>
+      <div className="testimonial-heading">
+        <h3 style={{ textAlign: 'center' }}>What people say about us</h3>
+      </div>
       <div className="testimonials-container">
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
+          navigation
+          pagination={{
+            dynamicBullets: true,
+          }}
+          modules={[Pagination, Navigation]}
+          className="myswiper"
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
