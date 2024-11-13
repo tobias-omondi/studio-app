@@ -13,7 +13,7 @@ const Home = () => {
       <div className="home-container">
         <div>
           <video className="background-video" autoPlay loop muted>
-            <source src="https://res.cloudinary.com/djyfoquip/video/upload/v1731322339/2512876-hd_1920_1080_30fps_doohvr.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/djyfoquip/video/upload/v1731320705/embaone%20video.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="caption">
