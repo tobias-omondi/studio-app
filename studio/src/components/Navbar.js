@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import logo from "../studioAsset/logo.png";
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { HiBars3CenterLeft ,HiXMark } from "react-icons/hi2";
 import './Navbar.css';
 
 const navLinks = [
@@ -16,6 +16,10 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -35,7 +39,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <Link to={link.url} className='nav_link'>{link.title}</Link>
+              <Link to={link.url} className='nav_link' onClick={closeMenu}>{link.title}</Link>
             </motion.li>
           ))}
         </motion.ul>
@@ -47,11 +51,11 @@ const Navbar = () => {
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.4 }}
         >
-          <Link to='/contact' className='btn_link'>Contact Us</Link>
+          <Link to='/contact' className='btn_link' onClick={closeMenu}>Contact Us</Link>
         </motion.button>
       </div>
       <div className='toggle_menu' onClick={toggleMenu}>
-        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      {isMenuOpen ? <HiXMark /> : <HiBars3CenterLeft />}
       </div>
     </div>
   );
