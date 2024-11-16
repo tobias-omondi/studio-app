@@ -24,6 +24,7 @@ const Gallery = () => {
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={30}
       slidesPerView={1}
+      spaceBetween = {0}
       navigation
       pagination={{ clickable: true }}
       autoplay={{ delay: 6000, disableOnInteraction: false }}
@@ -33,7 +34,7 @@ const Gallery = () => {
         <SwiperSlide key={index}>
           <div className="slider-item">
             <img src={image.src} alt={image.alt} />
-            <div className="caption">
+            <div className="caption_gallery">
               <p>{image.caption}</p>
               {image.showButton && (
                 <motion.button
