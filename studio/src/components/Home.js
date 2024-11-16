@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
   // Define caption details directly since no image is needed
-  const caption = "Capture your best moments at Emba One Studio—where creativity meets professional photography in every shot!";
+  const caption = "Capture your best moments at Emba One Studio";
   const buttonText = "GET IN TOUCH";
   
   return (
@@ -13,7 +13,7 @@ const Home = () => {
       <div className="home-container">
         <div>
           <video className="background-video" autoPlay loop muted>
-            <source src="https://res.cloudinary.com/djyfoquip/video/upload/v1731320705/embaone%20video.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/djyfoquip/video/upload/v1731761624/cameravideo_wr2k2x.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="caption">
