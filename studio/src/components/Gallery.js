@@ -10,6 +10,7 @@ import gallery3 from "../studioAsset/gallery3.jpeg";
 import gallery4 from "../studioAsset/gallery1.jpg";
 import { motion } from "framer-motion"; 
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import GalleryImages from './GalleryImages';
 
 const embaSliders = [
   { src: gallery1, alt: "EMBA Image 2", caption: "Explore the creativity at Emba One Studio—view our gallery to see our stunning photography work!", buttonText: "View our Gallery", showButton: true },
@@ -20,6 +21,7 @@ const embaSliders = [
 
 const Gallery = () => {
   return (
+    <>
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={30}
@@ -53,6 +55,8 @@ const Gallery = () => {
         </SwiperSlide>
       ))}
     </Swiper>
+    <GalleryImages />
+    </>
   );
 }
 
