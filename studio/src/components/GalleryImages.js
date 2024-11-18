@@ -9,7 +9,7 @@ const GalleryImages = () => {
   // Function to fetch gallery data
   const fetchData = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/images');  // Change to your API endpoint
+      const response = await fetch("https://gallery-backend-for-studio-2.onrender.com/images");  // Change to your API endpoint
       if (!response.ok) {
         throw new Error('Failed to fetch gallery data');
       }
