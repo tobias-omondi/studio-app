@@ -9,12 +9,12 @@ const GalleryImages = () => {
   // Function to fetch gallery data
   const fetchData = async () => {
     try {
-      const response = await fetch("https://gallery-backend-for-studio-2.onrender.com/images");  // Change to your API endpoint
+      const response = await fetch("https://gallery-backend-for-studio-2.onrender.com/images");  
       if (!response.ok) {
         throw new Error('Failed to fetch gallery data');
       }
       const data = await response.json();
-      setImages(data);  // Assuming your API returns an array of images
+      setImages(data);  
     } catch (err) {
       setError(err.message);
     } finally {
@@ -41,7 +41,7 @@ const GalleryImages = () => {
       <div className="gallery">
         {images.map((image, index) => (
           <div key={index} className="gallery-item">
-            <img src={image.file_url} alt={image.title} />
+            <img src={image.image_url} alt={image.title} />
             <p>{image.title}</p>
           </div>
         ))}
