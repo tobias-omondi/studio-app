@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import "./Gallery.css";
+import { ColumnsPhotoAlbum } from "react-photo-album";
 
 const GalleryImages = () => {
   // State to store gallery images
@@ -9,12 +11,23 @@ const GalleryImages = () => {
   // Function to fetch gallery data
   const fetchData = async () => {
     try {
-      const response = await fetch("https://gallery-backend-for-studio-2.onrender.com/images");  
+      const response = await fetch(
+        "https://gallery-backend-for-studio-2.onrender.com/images"
+      );
       if (!response.ok) {
-        throw new Error('Failed to fetch gallery data');
+        throw new Error("Failed to fetch gallery data");
       }
       const data = await response.json();
-      setImages(data);  
+
+      // Map the data to the format expected by PhotoAlbum
+      const formattedImages = data.map((image) => ({
+        src: image.image_url,
+        width: 800, // Default width (you can use actual image dimensions if available)
+        height: 600, // Default height
+        title: image.title,
+      }));
+
+      setImages(formattedImages);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -25,7 +38,7 @@ const GalleryImages = () => {
   // Use useEffect to fetch data when the component mounts
   useEffect(() => {
     fetchData();
-  }, []); // Empty dependency array means this runs once when the component mounts
+  }, []);
 
   if (loading) {
     return <div>Loading images...</div>;
@@ -36,15 +49,17 @@ const GalleryImages = () => {
   }
 
   return (
-    <div>
-      <h2>Our Images</h2>
-      <div className="gallery">
-        {images.map((image, index) => (
-          <div key={index} className="gallery-item">
-            <img src={image.image_url} alt={image.title} />
-            <p>{image.title}</p>
-          </div>
-        ))}
+    <div className="Gallery-background-color">
+      <div className="Gallery-thumb">
+        <h2>
+          <span className="thumb_letter">O</span>ur Images
+        </h2>
+      </div>
+      <div className="gallery-album">
+        <ColumnsPhotoAlbum
+          photos={images}
+          columns={1} // Force a single row
+        />
       </div>
     </div>
   );
