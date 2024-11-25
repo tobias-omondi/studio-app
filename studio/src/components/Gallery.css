@@ -205,6 +205,9 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-top: 10px
 }
+.video-parg p{
+  padding: 10px;
+}
 .video-h2 {
   color: #9e9797;
   font-family: "Afacad Flux", sans-serif;
