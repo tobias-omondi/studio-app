@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Gallery.css";
+import Footer from "./Footer";
 
 const GalleryImages = () => {
   const [images, setImages] = useState([]);
@@ -15,14 +16,20 @@ const GalleryImages = () => {
         throw new Error("Failed to fetch gallery data");
       }
       const data = await response.json();
-
-      setImages(data);
+  
+      // Simulate slow response
+      setTimeout(() => {
+        setImages(data);
+        setLoading(false); // Ensure this is delayed
+      }, 3000); // 3-second delay
     } catch (err) {
       setError(err.message);
-    } finally {
       setLoading(false);
     }
   };
+  
+  console.log("Loading:", loading);
+
 
   useEffect(() => {
     fetchData();
@@ -41,6 +48,7 @@ const GalleryImages = () => {
   }
 
   return (
+    <>
     <div className="Gallery-background-color">
       <div className="Gallery-thumb">
         <h2>
@@ -55,11 +63,12 @@ const GalleryImages = () => {
               alt={image.title}
               className="gallery-image"
             />
-            <p className="gallery-title">{image.title}</p>
           </div>
         ))}
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
