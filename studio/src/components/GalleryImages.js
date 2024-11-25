@@ -8,26 +8,25 @@ const GalleryImages = () => {
   const [error, setError] = useState(null);
 
   const fetchData = async () => {
-    try {
-      const response = await fetch(
-        "https://gallery-backend-for-studio-3.onrender.com/images"
-      );
-      if (!response.ok) {
-        throw new Error("Failed to fetch gallery data");
-      }
-      const data = await response.json();
-  
-      // Simulate slow response
-      setTimeout(() => {
-        setImages(data);
-        setLoading(false); // Ensure this is delayed
-      }, 3000); // 3-second delay
-    } catch (err) {
-      setError(err.message);
-      setLoading(false);
+  try {
+    const response = await fetch(
+      "https://gallery-backend-for-studio-3.onrender.com/images"
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch gallery data");
     }
-  };
-  
+    const data = await response.json();
+
+    // Simulate slow response
+    setTimeout(() => {
+      setImages(data);
+      setLoading(false); // Ensure this is delayed
+    }, 3000); // 3-second delay
+  } catch (err) {
+    setError(err.message);
+    setLoading(false);
+  }
+};
   console.log("Loading:", loading);
 
 

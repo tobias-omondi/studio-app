@@ -8,7 +8,7 @@ import './Navbar.css';
 const navLinks = [
   { title: 'Home', url: '/' },
   { title: 'Gallery', url: '/gallery' },
-  { title: 'Podcast', url: '/podcast' },
+  { title: 'Videos', url: '/videos' },
 ];
 
 const Navbar = () => {

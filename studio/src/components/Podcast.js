@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Videos from './Videos';
 
 
 
@@ -19,6 +20,7 @@ const embaSliders = [
 
 const Podcast = () => {
   return (
+    <>
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={30}
@@ -52,6 +54,8 @@ const Podcast = () => {
         </SwiperSlide>
       ))}
     </Swiper>
+    <Videos/>
+    </>
   );
 }
 
