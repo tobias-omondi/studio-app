@@ -162,9 +162,10 @@
 .loader-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   height: 100vh; /* Fullscreen loading */
   background-color: #f9f9f9;
+  margin-top: 5%;
 }
 
 .loader {
