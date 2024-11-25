@@ -88,47 +88,112 @@
     color: bisque;
     font-weight: 400;
   }
-  
-  .gallery-album {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap; /* Ensure images are in a single row */
-    overflow-x: auto; /* Add horizontal scrolling if necessary */
+.Gallery-background-color {
+  padding: 20px;
+  background-color: #161616;
+}
+
+/* Section heading */
+.Gallery-thumb {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.thumb_letter {
+  color: #ff5722;
+  font-size: 3rem;
+}
+
+/* Flexbox container for images */
+.gallery-album {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: center;
+}
+
+/* Individual gallery item */
+.gallery-item {
+  flex: 1 1 calc(33.333% - 20px); /* Default: 3 images per row */
+  max-width: calc(33.333% - 20px);
+  text-align: center;
+}
+
+/* Ensure images are responsive */
+.gallery-image {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Title below each image */
+.gallery-title {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 20px); /* 2 images per row for smaller screens */
+    max-width: calc(50% - 20px);
   }
-  
-  /* Override react-photo-album styles to use flexbox */
-  .rpa-container {
-    display: flex;
-    flex-wrap: nowrap;
+  .gallery-image {
+    width: 100%;
+    height: 400px;
   }
-  
-  .rpa-image {
-    margin: 10px; /* Adjust margin as needed */
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 100%; /* 1 image per row for extra-small screens */
+    max-width: 100%;
   }
-  
-  .rpa-image img {
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    height: 300px;
-    object-fit: cover;
-    width: 100%; /* Ensure images take up equal space */
+  .gallery-image {
+    width: 100%;
+    height: 400px;
   }
-  
-  .rpa-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Loader Styles */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Fullscreen loading */
+  background-color: #f9f9f9;
+}
+
+.loader {
+  width: 70px;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(farthest-side, #ffa516 90%, #0000) center/16px 16px,
+    radial-gradient(farthest-side, green 90%, #0000) bottom/12px 12px;
+  background-repeat: no-repeat;
+  animation: l17 1s infinite linear;
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  aspect-ratio: 1;
+  inset: auto 0 16px;
+  margin: auto;
+  background: #ccc;
+  border-radius: 50%;
+  transform-origin: 50% calc(100% + 10px);
+  animation: inherit;
+  animation-duration: 0.5s;
+}
+
+@keyframes l17 {
+  100% {
+    transform: rotate(1turn);
   }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .rpa-image img {
-      height: 200px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .rpa-image img {
-      height: 150px;
-    }
-  }
+}

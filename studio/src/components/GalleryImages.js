@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Gallery.css";
-import { ColumnsPhotoAlbum } from "react-photo-album";
 
 const GalleryImages = () => {
-  // State to store gallery images
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Function to fetch gallery data
   const fetchData = async () => {
     try {
       const response = await fetch(
@@ -19,15 +16,7 @@ const GalleryImages = () => {
       }
       const data = await response.json();
 
-      // Map the data to the format expected by PhotoAlbum
-      const formattedImages = data.map((image) => ({
-        src: image.image_url,
-        width: 800, // Default width (you can use actual image dimensions if available)
-        height: 600, // Default height
-        title: image.title,
-      }));
-
-      setImages(formattedImages);
+      setImages(data);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -35,13 +24,16 @@ const GalleryImages = () => {
     }
   };
 
-  // Use useEffect to fetch data when the component mounts
   useEffect(() => {
     fetchData();
   }, []);
 
   if (loading) {
-    return <div>Loading images...</div>;
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+      </div>
+    );
   }
 
   if (error) {
@@ -56,10 +48,16 @@ const GalleryImages = () => {
         </h2>
       </div>
       <div className="gallery-album">
-        <ColumnsPhotoAlbum
-          photos={images}
-          columns={1} // Force a single row
-        />
+        {images.map((image, index) => (
+          <div key={index} className="gallery-item">
+            <img
+              src={image.image_url}
+              alt={image.title}
+              className="gallery-image"
+            />
+            <p className="gallery-title">{image.title}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
