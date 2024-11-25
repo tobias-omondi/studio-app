@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Message.css";
 import Footer from './Footer';
 import {motion} from "framer-motion";
-
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const messageCaption = [
     {
@@ -21,6 +21,15 @@ const Message = () => {
         email: '',
         message: '',
     });
+
+    // Initialize AOS when the component mounts
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in ms
+          once: true, // Animation will happen only once when scrolling
+          easing: 'ease-out', // Animation easing
+        });
+    }, []);
 
     // Handle input changes
     const handleChange = (e) => {
@@ -40,15 +49,16 @@ const Message = () => {
     return (
         <>
         <div className="message-container">
-        <div className="message-heading">
-            {messageCaption.map((item, index) => (
-                <div key={index} className="message-item">
-                    {item.messageHeading && <h2 className="message-heading">{item.messageHeading}</h2>}
-                    {item.message && <p className="message-text">{item.message}</p>}
-                </div>
-            ))}
-             </div>
-            <div className='message-inputs'>
+            <div className="message-heading">
+                {messageCaption.map((item, index) => (
+                    <div key={index} className="message-item" data-aos="fade-up" data-aos-duration="1500">
+                        {item.messageHeading && <h2>{item.messageHeading}</h2>}
+                        {item.message && <p className="message-text">{item.message}</p>}
+                    </div>
+                ))}
+            </div>
+
+            <div className='message-inputs' data-aos="fade-up" data-aos-duration="1500">
                 <form onSubmit={handleSubmit}>
                     <input
                         type='text'
@@ -63,7 +73,7 @@ const Message = () => {
                         type='email'
                         id='email'
                         name='email'
-                        placeholder='email:'
+                        placeholder='Email:'
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -77,19 +87,23 @@ const Message = () => {
                         required
                     ></textarea>
                     <motion.button
-                     type='submit' className='btn-message'
-                    initial = {{opacity: 0, scale: 0.8}}
-                    animate={{ opacity: 1, scale: 1 }} 
-                    transition={{ duration: 0.5 }} 
-                    whileHover={{ scale: 1.05 }} 
-                    whileTap={{ scale: 0.95 }}>Send Message 
+                        type='submit'
+                        className='btn-message'
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        Send Message
                     </motion.button>
                 </form>
+            </div>
         </div>
-        </div>
+
         <Footer />
         </>
     );
-}
+};
 
 export default Message;
