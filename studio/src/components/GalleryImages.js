@@ -12,7 +12,7 @@ const GalleryImages = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://gallery-backend-for-studio-2.onrender.com/images"
+        "https://gallery-backend-for-studio-3.onrender.com/images"
       );
       if (!response.ok) {
         throw new Error("Failed to fetch gallery data");
