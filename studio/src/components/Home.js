@@ -2,8 +2,12 @@ import React from 'react';
 import './Home.css';
 import Aboutus from './Aboutus';
 import { motion } from 'framer-motion';
+import {useNavigate } from 'react-router-dom'
+
 
 const Home = () => {
+
+  const navigate = useNavigate();
   // Define caption details directly since no image is needed
   const caption = "Capture your best moments at Emba One Studio";
   const buttonText = "GET IN TOUCH";
@@ -21,7 +25,8 @@ const Home = () => {
           <motion.button className="caption-button"
                whileHover={{ backgroundColor: "gray", scale: 0.9 }}
                whileTap={{ scale: 0.9 }}
-               transition={{ duration: 0.5 }}>
+               transition={{ duration: 0.5 }}
+               onClick={() => navigate('/contact')}>
             {buttonText}
             </motion.button>
         </div>

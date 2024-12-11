@@ -22,16 +22,16 @@ const Footer = () => {
       <div className='footer-icons'>
           <ul>
             <li>
-              <a href=''> <FaSquareXTwitter /></a>
+              <a href='https://x.com/'> <FaSquareXTwitter /></a>
             </li>
             <li>
-              <a href=''> <FaInstagram /></a>
+              <a href='https://www.instagram.com/'> <FaInstagram /></a>
             </li>
             <li>
-              <a href=''> <FaTiktok /></a>
+              <a href='https://www.tiktok.com/'> <FaTiktok /></a>
             </li>
             <li>
-              <a href=''> <ImYoutube /></a>
+              <a href='https://www.youtube.com/'> <ImYoutube /></a>
             </li>
           </ul>
         </div>
@@ -40,13 +40,13 @@ const Footer = () => {
         <h2>OUR WEB LINKS</h2>
         <ul>
           <li>
-            <a href='#'>Services</a>
-          </li>
-          <li>
-            <a href='#'>Gallery</a>
-          </li>
-          <li>
             <a href='#'>About us</a>
+          </li>
+          <li>
+            <a href='/gallery'>Gallery</a>
+          </li>
+          <li>
+            <a href='/videos'>Videos</a>
           </li>
         </ul>
         <p>Got questions, ideas, or just want to say hello?  Stay in touch and let’s keep this conversation going!</p>
