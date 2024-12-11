@@ -13,10 +13,9 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import GalleryImages from './GalleryImages';
 
 const embaSliders = [
-  { src: gallery1, alt: "EMBA Image 2", caption: "Explore the creativity at Emba One Studio—view our gallery to see our stunning photography work!", buttonText: "View our Gallery", showButton: true },
-  { src: gallery2, alt: "EMBA Image 3", caption: "We offer 3D photo editing to add depth and dimension to your images. Transform your pictures into stunning art!", buttonText: "View Services", showButton: true },
-  { src: gallery3, alt: "EMBA Image 3", caption: "We offer 3D photo editing to add depth and dimension to your images. Transform your pictures into stunning art!", buttonText: "View Services", showButton: true },
-  { src: gallery4, alt: "EMBA Image 3", caption: "We offer 3D photo editing to add depth and dimension to your images. Transform your pictures into stunning art!", buttonText: "View Services", showButton: true }
+  { src: gallery1, alt: "EMBA Image 2", caption: "Explore the creativity at Emba One Studio—view our gallery to see our stunning photography work!", buttonText: "View our Gallery", showButton: false },
+  { src: gallery2, alt: "EMBA Image 3" },
+  { src: gallery3, alt: "EMBA Image 3"},
 ];
 
 const Gallery = () => {
